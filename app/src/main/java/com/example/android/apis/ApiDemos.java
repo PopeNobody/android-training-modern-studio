@@ -35,7 +35,7 @@ import java.util.Map;
 
 public class ApiDemos extends ListActivity {
 
-    ApiDemos() {
+    public ApiDemos() {
         super();
     }
     @Override

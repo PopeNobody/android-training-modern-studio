@@ -41,19 +41,15 @@ public class IncomingMessage extends Activity {
 
         setContentView(R.layout.incoming_message);
 
-        Button button = (Button) findViewById(R.id.notify_app);
+        Button button = findViewById(R.id.notify_app);
         button.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {
                     showAppNotification();
                 }
             });
 
-        button = (Button) findViewById(R.id.notify_interstitial);
-        button.setOnClickListener(new Button.OnClickListener() {
-                public void onClick(View v) {
-                    showInterstitialNotification();
-                }
-            });
+        button = findViewById(R.id.notify_interstitial);
+        button.setOnClickListener(v -> showInterstitialNotification());
     }
 
 //BEGIN_INCLUDE(app_notification)
@@ -171,7 +167,9 @@ public class IncomingMessage extends Activity {
         intent.putExtra(IncomingMessageView.KEY_MESSAGE, message);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                intent, PendingIntent.FLAG_CANCEL_CURRENT);
+                intent,
+          PendingIntent.FLAG_IMMUTABLE|
+            PendingIntent.FLAG_CANCEL_CURRENT);
 
         // The ticker text, this uses a formatted string so our message could be localized
         String tickerText = getString(R.string.imcoming_message_ticker_text, message);
