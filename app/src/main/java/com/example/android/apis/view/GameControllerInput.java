@@ -353,9 +353,9 @@ public class GameControllerInput extends Activity
             mContext = context;
             mResources = resources;
 
-            mDeviceHeading = new Heading(BASE_ID_HEADING | 0,
+            mDeviceHeading = new Heading(BASE_ID_HEADING,
                     mResources.getString(R.string.game_controller_input_heading_device));
-            mDeviceNameTextColumn = new TextColumn(BASE_ID_DEVICE_ITEM | 0,
+            mDeviceNameTextColumn = new TextColumn(BASE_ID_DEVICE_ITEM,
                     mResources.getString(R.string.game_controller_input_label_device_name));
 
             mAxesHeading = new Heading(BASE_ID_HEADING | 1,

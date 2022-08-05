@@ -6,7 +6,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "cell411.train"
+        applicationId "com.example.android.apis"
         minSdk 26
         targetSdk 32
         versionCode 1
@@ -14,7 +14,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    lintOptions {
+      baseline(file("lint-baseline.xml"))
+    }
     buildTypes {
         release {
             minifyEnabled false

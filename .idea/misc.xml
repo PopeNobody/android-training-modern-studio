@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/action_bar_display_options_custom.xml" value="0.121875" />
         <entry key="app/src/main/res/layout/custom_layout.xml" value="0.121875" />
         <entry key="app/src/main/res/layout/custom_view_1.xml" value="0.121875" />
         <entry key="app/src/main/res/layout/drag_layout.xml" value="0.121875" />
+        <entry key="app/src/main/res/layout/list_position.xml" value="0.121875" />
+        <entry key="app/src/main/res/layout/radio_group_1.xml" value="0.121875" />
       </map>
     </option>
   </component>

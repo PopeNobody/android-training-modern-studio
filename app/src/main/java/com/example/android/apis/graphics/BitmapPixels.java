@@ -38,7 +38,7 @@ public class BitmapPixels extends GraphicsActivity {
         private Bitmap mBitmap3;
 
         // access the red component from a premultiplied color
-        private static int getR32(int c) { return (c >>  0) & 0xFF; }
+        private static int getR32(int c) { return (c) & 0xFF; }
         // access the red component from a premultiplied color
         private static int getG32(int c) { return (c >>  8) & 0xFF; }
         // access the red component from a premultiplied color
@@ -51,15 +51,15 @@ public class BitmapPixels extends GraphicsActivity {
          * packs them into an int in the correct device order.
          */
         private static int pack8888(int r, int g, int b, int a) {
-            return (r << 0) | ( g << 8) | (b << 16) | (a << 24);
+            return (r) | ( g << 8) | (b << 16) | (a << 24);
         }
 
         private static short pack565(int r, int g, int b) {
-            return (short)((r << 11) | ( g << 5) | (b << 0));
+            return (short)((r << 11) | ( g << 5) | (b));
         }
 
         private static short pack4444(int r, int g, int b, int a) {
-            return (short)((a << 0) | ( b << 4) | (g << 8) | (r << 12));
+            return (short)((a) | ( b << 4) | (g << 8) | (r << 12));
         }
 
         private static int mul255(int c, int a) {

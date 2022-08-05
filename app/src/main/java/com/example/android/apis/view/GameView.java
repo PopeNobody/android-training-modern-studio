@@ -55,7 +55,7 @@ public class GameView extends View {
     private long mLastStepTime;
     private InputDevice mLastInputDevice;
 
-    private static final int DPAD_STATE_LEFT  = 1 << 0;
+    private static final int DPAD_STATE_LEFT  = 1;
     private static final int DPAD_STATE_RIGHT = 1 << 1;
     private static final int DPAD_STATE_UP    = 1 << 2;
     private static final int DPAD_STATE_DOWN  = 1 << 3;
